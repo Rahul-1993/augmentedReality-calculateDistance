@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="Augmented_Reality_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hve-l0-2AL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="klg-1s-Jfm">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JUL-CH-y7m">
+                                <rect key="frame" x="116" y="613" width="142" height="34"/>
+                                <state key="normal" title="Set Starting Point">
+                                    <color key="titleShadowColor" red="0.1232857312" green="0.093304477240000003" blue="0.20816148479999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="theButtonTapped:" destination="BV1-FR-VrT" eventType="touchUpInside" id="eZJ-on-J7v"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.43556" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRS-az-yad">
+                                <rect key="frame" x="156" y="584" width="63" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xvB-q2-bah">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="UtN-W9-NnG"/>
+                                    <constraint firstAttribute="width" constant="20" id="cjF-0U-mcw"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kWT-Vr-Dpd" firstAttribute="bottom" secondItem="klg-1s-Jfm" secondAttribute="bottom" id="6do-09-U8z"/>
+                            <constraint firstItem="kWT-Vr-Dpd" firstAttribute="bottom" secondItem="JUL-CH-y7m" secondAttribute="bottom" constant="20" id="QVu-Uv-f7O"/>
+                            <constraint firstItem="JUL-CH-y7m" firstAttribute="centerX" secondItem="Hve-l0-2AL" secondAttribute="centerX" id="S92-HO-YfM"/>
+                            <constraint firstItem="klg-1s-Jfm" firstAttribute="leading" secondItem="kWT-Vr-Dpd" secondAttribute="leading" id="YGQ-rO-OYG"/>
+                            <constraint firstItem="xvB-q2-bah" firstAttribute="centerY" secondItem="Hve-l0-2AL" secondAttribute="centerY" id="ggR-8d-VTq"/>
+                            <constraint firstItem="klg-1s-Jfm" firstAttribute="top" secondItem="kWT-Vr-Dpd" secondAttribute="top" id="jsl-eT-Wae"/>
+                            <constraint firstItem="xvB-q2-bah" firstAttribute="centerX" secondItem="Hve-l0-2AL" secondAttribute="centerX" id="nHK-Yz-AZY"/>
+                            <constraint firstItem="kWT-Vr-Dpd" firstAttribute="trailing" secondItem="klg-1s-Jfm" secondAttribute="trailing" id="o9K-zX-D1A"/>
+                            <constraint firstItem="YRS-az-yad" firstAttribute="centerX" secondItem="Hve-l0-2AL" secondAttribute="centerX" id="uoO-0f-KSg"/>
+                            <constraint firstItem="JUL-CH-y7m" firstAttribute="top" secondItem="YRS-az-yad" secondAttribute="bottom" constant="8" id="ypw-vS-B8M"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kWT-Vr-Dpd"/>
+                    </view>
+                    <connections>
+                        <outlet property="measurmentLabel" destination="YRS-az-yad" id="aNb-nP-ygo"/>
+                        <outlet property="sceneView" destination="klg-1s-Jfm" id="YaX-Qy-KIT"/>
+                        <outlet property="targetView" destination="xvB-q2-bah" id="a2x-Rm-h6s"/>
+                        <outlet property="theButton" destination="JUL-CH-y7m" id="Er1-Jm-dPd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
